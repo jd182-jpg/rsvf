@@ -631,38 +631,63 @@ button{ font:inherit; }
 /* =========================================================================
    STORY
    ========================================================================= */
-.story{
-  display:grid; grid-template-columns:1fr 1fr;
-  gap:clamp(2rem,5vw,4rem);
+/* Three short chapters read far better than two tall columns of body copy */
+.chapters{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(1.75rem,4vw,3.25rem);
   margin-bottom:clamp(3.5rem,7vw,5.5rem);
 }
-.story__col p{
-  color:#C6D0DE; font-size:1rem; line-height:1.72;
-  max-width:60ch; margin:0 0 1.15rem;
+.chapter{
+  border-top:1px solid rgba(87,187,185,.45);
+  padding-top:1.4rem;
 }
-.story__col p:last-child{ margin-bottom:0; }
+.chapter__num{
+  font-family:var(--font-mono); font-weight:700; font-size:.82rem;
+  letter-spacing:.08em; color:var(--teal);
+}
+.chapter h3{
+  font-family:var(--font-display); font-weight:600;
+  font-size:1.35rem; letter-spacing:-.015em;
+  margin:.6rem 0 .8rem; color:#fff;
+}
+.chapter p{
+  margin:0;
+  font-size:.97rem; line-height:1.75;
+  color:#C6D0DE;
+  max-width:46ch;
+}
 
-.story__drop{ font-size:1.12rem !important; color:#fff !important; }
-
-.story__close{
-  color:#fff !important;
+.story-quote{
+  margin:0 0 clamp(3rem,6vw,4.5rem);
+  max-width:900px;
+}
+.story-quote blockquote{
+  margin:0 0 1.5rem;
   font-family:var(--font-display); font-weight:500;
-  font-size:1.08rem !important; line-height:1.55 !important;
-  padding-left:1.1rem; border-left:2px solid var(--teal);
-  margin-top:2rem !important;
+  font-size:clamp(1.35rem,3.2vw,2.3rem);
+  line-height:1.32; letter-spacing:-.022em;
+  color:#fff;
 }
-.story__sign{
-  margin-top:1.5rem !important;
-  font-size:.9rem !important; color:var(--muted-dark) !important;
+.story-quote figcaption{
+  display:grid; gap:.15rem;
+  padding-left:1rem;
+  border-left:2px solid var(--teal);
 }
-.story__sign strong{ color:#fff; }
+.story-quote figcaption span{
+  font-size:.85rem; color:var(--muted-dark);
+}
+.story-quote figcaption strong{
+  font-family:var(--font-display); font-weight:600;
+  font-size:.95rem; color:#fff;
+}
 
 .values{
   display:grid; grid-template-columns:repeat(5,1fr);
-  gap:1.25rem;
-  padding-top:clamp(2rem,4vw,3rem);
+  gap:clamp(1.25rem,2.5vw,2rem);
+  padding-top:clamp(2.25rem,4vw,3rem);
   border-top:1px solid rgba(255,255,255,.12);
 }
+.value{ border-top:1px solid rgba(87,187,185,.45); padding-top:1.1rem; }
 .value h3{
   font-family:var(--font-display); font-weight:600;
   font-size:.98rem; letter-spacing:-.005em;
@@ -798,7 +823,9 @@ button{ font:inherit; }
    RESPONSIVE
    ========================================================================= */
 @media (max-width:1000px){
-  .story{ grid-template-columns:1fr; }
+  .chapters{ grid-template-columns:1fr; gap:2rem; }
+  .chapter p{ max-width:62ch; }
+  .story-quote{ max-width:none; }
   .values{ grid-template-columns:repeat(2,1fr); gap:1.5rem; }
   .contact{ grid-template-columns:1fr; }
   .pillars{ grid-template-columns:1fr; gap:1.75rem; }
