@@ -45,8 +45,17 @@ If you add a sector beyond the four, add a matching button in `index.html`:
 Edit the `TEAM` array in `assets/js/data.js`. Groups render in the order listed.
 
 ```js
-{ name: "First Last", role: "Director, Energy", sector: "Energy" }
+{
+  name: "First Last",
+  role: "Director, Energy",
+  sector: "Energy",
+  linkedin: "https://www.linkedin.com/in/first-last"
+}
 ```
+
+With a `linkedin` URL the whole card becomes a link and a LinkedIn badge fades
+in on the photo tile on hover. Leave it out and the card is plain, no broken
+icon.
 
 - **Headshots:** drop a square image in `assets/img/team/` and add
   `photo: "assets/img/team/first-last.jpg"`. Without one, the card shows a
@@ -103,4 +112,7 @@ assets/img/team/              headshots (empty for now)
   site cannot process form posts. For a real inbox, point it at Formspree or
   Netlify Forms.
 - The hero starfield runs at 30fps and pauses when scrolled out of view.
+- `index.html` loads the CSS and JS with a `?v=N` query string. After editing
+  `data.js` or `style.css`, bump that number in all three tags so browsers pick
+  up the change instead of serving a cached copy.
 - Everything respects `prefers-reduced-motion`.

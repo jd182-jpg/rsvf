@@ -85,18 +85,18 @@ const TEAM = [
     group: "Managing partners",
     caption: "Fund strategy, investment committee, and final check approval.",
     people: [
-      { name: "Raj Shroff",   role: "Managing Partner" },
-      { name: "Alena Powell", role: "Managing Partner" }
+      { name: "Raj Shroff",   role: "Managing Partner", linkedin: "https://www.linkedin.com/in/raj-sahir-shroff" },
+      { name: "Alena Powell", role: "Managing Partner", linkedin: "https://www.linkedin.com/in/alena-powell" }
     ]
   },
   {
     group: "Sector directors",
     caption: "Each director owns sourcing, diligence, and founder relationships in their sector.",
     people: [
-      { name: "Kaira Sheth",     role: "Director, Energy",     sector: "Energy" },
-      { name: "Jackson Darr",    role: "Director, Healthcare", sector: "Healthcare" },
-      { name: "Sriram Chundi",   role: "Director, Consumer",   sector: "Consumer" },
-      { name: "Muyiwa Ogunsola", role: "Director, Enterprise", sector: "Enterprise" }
+      { name: "Kaira Sheth",     role: "Director, Energy",     sector: "Energy",     linkedin: "https://www.linkedin.com/in/kaira-sheth" },
+      { name: "Jackson Darr",    role: "Director, Healthcare", sector: "Healthcare", linkedin: "https://www.linkedin.com/in/jacksondarr" },
+      { name: "Sriram Chundi",   role: "Director, Consumer",   sector: "Consumer",   linkedin: "https://www.linkedin.com/in/sriram314" },
+      { name: "Muyiwa Ogunsola", role: "Director, Enterprise", sector: "Enterprise", linkedin: "https://www.linkedin.com/in/muyiwao" }
     ]
   }
 ];

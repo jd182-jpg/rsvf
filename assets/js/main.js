@@ -154,6 +154,8 @@
      --------------------------------------------------------------------- */
   var ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg>';
 
+  var LINKEDIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>';
+
   function logoMarkup(c, cls) {
     if (!c.logo) return '<span class="wordmark">' + esc(c.name) + '</span>';
     return '<img src="' + esc(c.logo) + '" alt="' + esc(c.name) + '"' +
@@ -234,12 +236,23 @@
           : '<span class="person__mono">' + (tba ? 'Open seat' : esc(initials(p.name))) + '</span>' +
             (tba ? '' : '<img class="person__owl" src="assets/img/logos/owl-white-256.png" alt="" aria-hidden="true">');
 
+        var inner =
+          '<div class="person__photo">' + photo +
+            (p.linkedin ? '<span class="person__badge">' + LINKEDIN + '</span>' : '') +
+          '</div>' +
+          '<h4>' + (tba ? 'Recruiting' : esc(p.name)) + '</h4>' +
+          '<p class="person__role">' + esc(p.role) + '</p>' +
+          (p.sector ? '<span class="person__sector">' + esc(p.sector) + '</span>' : '');
+
+        /* the whole card is the link when we have a profile, so the tap target is generous */
+        var body = p.linkedin
+          ? '<a class="person__link" href="' + esc(p.linkedin) + '" target="_blank" rel="noopener"' +
+            ' aria-label="' + esc(p.name) + ' on LinkedIn">' + inner + '</a>'
+          : inner;
+
         return '' +
           '<article class="person reveal' + (tba ? ' person--tba' : '') + '" style="--d:' + (i * 0.05).toFixed(2) + 's">' +
-            '<div class="person__photo">' + photo + '</div>' +
-            '<h4>' + (tba ? 'Recruiting' : esc(p.name)) + '</h4>' +
-            '<p class="person__role">' + esc(p.role) + '</p>' +
-            (p.sector ? '<span class="person__sector">' + esc(p.sector) + '</span>' : '') +
+            body +
           '</article>';
       }).join('');
 
