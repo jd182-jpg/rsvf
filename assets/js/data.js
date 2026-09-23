@@ -93,10 +93,10 @@ const TEAM = [
     group: "Sector directors",
     caption: "Each director owns sourcing, diligence, and founder relationships in their sector.",
     people: [
-      { name: "Kaira Sheth",  role: "Director, Energy",     sector: "Energy" },
-      { name: "Jackson Darr", role: "Director, Healthcare", sector: "Healthcare" },
-      { name: "Mo",           role: "Director, Consumer",   sector: "Consumer" },
-      { name: "",             role: "Director, Enterprise", sector: "Enterprise", tba: true }
+      { name: "Kaira Sheth",     role: "Director, Energy",     sector: "Energy" },
+      { name: "Jackson Darr",    role: "Director, Healthcare", sector: "Healthcare" },
+      { name: "Sriram Chundi",   role: "Director, Consumer",   sector: "Consumer" },
+      { name: "Muyiwa Ogunsola", role: "Director, Enterprise", sector: "Enterprise" }
     ]
   }
 ];
