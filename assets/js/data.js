@@ -85,18 +85,18 @@ const TEAM = [
     group: "Managing partners",
     caption: "Fund strategy, investment committee, and final check approval.",
     people: [
-      { name: "Raj Shroff",   role: "Managing Partner", linkedin: "https://www.linkedin.com/in/raj-sahir-shroff" },
-      { name: "Alena Powell", role: "Managing Partner", linkedin: "https://www.linkedin.com/in/alena-powell" }
+      { name: "Raj Shroff",   role: "Managing Partner", photo: "assets/img/team/raj-shroff.webp",   linkedin: "https://www.linkedin.com/in/raj-sahir-shroff" },
+      { name: "Alena Powell", role: "Managing Partner", photo: "assets/img/team/alena-powell.webp", linkedin: "https://www.linkedin.com/in/alena-powell" }
     ]
   },
   {
     group: "Sector directors",
     caption: "Each director owns sourcing, diligence, and founder relationships in their sector.",
     people: [
-      { name: "Kaira Sheth",     role: "Director, Energy",     sector: "Energy",     linkedin: "https://www.linkedin.com/in/kaira-sheth" },
-      { name: "Jackson Darr",    role: "Director, Healthcare", sector: "Healthcare", linkedin: "https://www.linkedin.com/in/jacksondarr" },
-      { name: "Sriram Chundi",   role: "Director, Consumer",   sector: "Consumer",   linkedin: "https://www.linkedin.com/in/sriram314" },
-      { name: "Muyiwa Ogunsola", role: "Director, Enterprise", sector: "Enterprise", linkedin: "https://www.linkedin.com/in/muyiwao" }
+      { name: "Kaira Sheth",     role: "Director, Energy",     sector: "Energy",     photo: "assets/img/team/kaira-sheth.webp",   linkedin: "https://www.linkedin.com/in/kaira-sheth" },
+      { name: "Jackson Darr",    role: "Director, Healthcare", sector: "Healthcare",                                             linkedin: "https://www.linkedin.com/in/jacksondarr" },
+      { name: "Sriram Chundi",   role: "Director, Consumer",   sector: "Consumer",   photo: "assets/img/team/sriram-chundi.webp", linkedin: "https://www.linkedin.com/in/sriram314" },
+      { name: "Muyiwa Ogunsola", role: "Director, Enterprise", sector: "Enterprise",                                             linkedin: "https://www.linkedin.com/in/muyiwao" }
     ]
   }
 ];

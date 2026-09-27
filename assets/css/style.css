@@ -597,7 +597,7 @@ button{ font:inherit; }
   position:absolute; top:10px; right:10px;
   width:28px; height:28px;
   border-radius:var(--r-card);
-  background:rgba(255,255,255,.16);
+  background:rgba(10,22,40,.62);
   backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
   display:flex; align-items:center; justify-content:center;
   opacity:0; transform:translateY(-4px);
@@ -608,8 +608,7 @@ button{ font:inherit; }
 .person:hover .person__badge,
 .person__link:focus-visible .person__badge{ opacity:1; transform:none; }
 
-.person--tba .person__badge{ background:rgba(10,22,40,.1); }
-.person--tba .person__badge svg{ fill:var(--slate); }
+.person--tba .person__badge{ background:rgba(10,22,40,.55); }
 
 .person__link:hover h4{ color:var(--rsvf-blue); }
 
